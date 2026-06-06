@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
       <div className="bg-[url(./src/assets/hero3.jpg)] bg-fixed h-dvh w-full bg-cover text-3xl z-0 text-black justify-center flex flex-wrap px-5">
-        <div className="h-120 w-100 bg-white relative top-1/3 right-1/3 pt-5 text-5xl px-3 custom-font">
+        <div className="h-120 w-100 bg-white/5 backdrop-blur-lg relative top-1/3 right-1/3 pt-5 text-5xl px-3 custom-font">
           <div className="z-0 h-50 px-5">
             <h1 className="text-4xl ">Elegance in every detail</h1>
           </div>
