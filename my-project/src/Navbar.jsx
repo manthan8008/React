@@ -63,7 +63,7 @@ function Navbar() {
   return (
     <>
       <header className="flex justify-center fixed top-5 z-10 w-full ">
-        <nav className=" flex items-center justify-between backdrop-blur-xl rounded-full bg-white/5 px-10 text-2xl py-6 custom-font gap-3 w-[92%] text-white">
+        <nav className=" flex items-center justify-between backdrop-blur-xl rounded-full border border-white/10 bg-white/5 px-10 text-2xl py-6 custom-font gap-3 w-[92%] text-white">
           <div>CHAMHAQ</div>
           <div>
             <ul className="flex gap-[4vw] items-center text-white">

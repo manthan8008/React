@@ -1,7 +1,9 @@
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../Components/ProductCard.jsx";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
+import Navbar from "../Components/Navbar.jsx";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -53,15 +55,21 @@ const products = [
     category: "Rings",
     image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e",
   },
+  {
+    id: 8,
+    title: "Diamond Ring",
+    price: "$2,499",
+    category: "Rings",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e",
+  },
+  {
+    id: 9,
+    title: "Diamond Ring",
+    price: "$2,499",
+    category: "Rings",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e",
+  },
 ];
-const rings = products.filter((ring) => ring.category === "Rings");
-const earrings = products.filter((earring) => earring.category === "Earrings");
-const necklaces = products.filter(
-  (necklace) => necklace.category === "Necklaces",
-);
-const bracelets = products.filter(
-  (bracelet) => bracelet.category === "Bracelets",
-);
 
 export default function Products() {
   const [allprod, setAllprod] = useState(true);
@@ -69,6 +77,17 @@ export default function Products() {
   const [catEarring, setCatEarring] = useState(false);
   const [catNeckpiece, setCatneckpiece] = useState(false);
   const [catBracelet, setCatBracelet] = useState(false);
+
+  const rings = products.filter((ring) => ring.category === "Rings");
+  const earrings = products.filter(
+    (earring) => earring.category === "Earrings",
+  );
+  const necklaces = products.filter(
+    (necklace) => necklace.category === "Necklaces",
+  );
+  const bracelets = products.filter(
+    (bracelet) => bracelet.category === "Bracelets",
+  );
 
   function SelectRing() {
     setAllprod(false);
@@ -100,10 +119,10 @@ export default function Products() {
   }
   function SelectAll() {
     setCatring(false);
-    setAllprod(false);
+    setAllprod(true);
     setCatEarring(false);
     setCatneckpiece(false);
-    setCatBracelet(true);
+    setCatBracelet(false);
   }
   return (
     <div className="bg-black text-white min-h-screen">
@@ -148,7 +167,7 @@ export default function Products() {
       <section className="py-10 px-4 md:px-8">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-4">
           <button
-            onClick={SelectRing}
+            onClick={SelectAll}
             className={
               allprod
                 ? "px-6 py-3 rounded-full bg-yellow-500 text-black border border-white/10 transition-all"
@@ -216,27 +235,37 @@ export default function Products() {
         >
           {allprod
             ? products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <Link key={product.id} to={`/product/${product.id}`}>
+                  <ProductCard key={product.key} product={product} />
+                </Link>
               ))
             : null}
           {catRing
             ? rings.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <Link key={product.id} to={`/product/${product.id}`}>
+                  <ProductCard key={product.key} product={product} />
+                </Link>
               ))
             : null}
           {catEarring
             ? earrings.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <Link key={product.id} to={`/product/${product.id}`}>
+                  <ProductCard key={product.key} product={product} />
+                </Link>
               ))
             : null}
           {catNeckpiece
             ? necklaces.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <Link key={product.id} to={`/product/${product.id}`}>
+                  <ProductCard key={product.key} product={product} />
+                </Link>
               ))
             : null}
           {catBracelet
             ? bracelets.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <Link key={product.id} to={`/product/${product.id}`}>
+                  <ProductCard key={product.key} product={product} />
+                </Link>
               ))
             : null}
         </div>
@@ -244,3 +273,4 @@ export default function Products() {
     </div>
   );
 }
+export { products };
