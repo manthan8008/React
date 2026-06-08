@@ -4,17 +4,17 @@ const items = [
   {
     title: "Diamond Ring",
     price: "$2,499",
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e",
+    image: "../src/assets/hero1.jpg",
   },
   {
     title: "Gold Necklace",
     price: "$3,999",
-    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d",
+    image: "../src/assets/hero1.jpg",
   },
   {
     title: "Luxury Earrings",
     price: "$1,799",
-    image: "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584",
+    image: "../src/assets/hero1.jpg",
   },
 ];
 

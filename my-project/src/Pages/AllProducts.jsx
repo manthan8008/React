@@ -1,12 +1,13 @@
-import ProductCard from "../Components/ProductCard.jsx";
-import { motion } from "framer-motion";
-import Navbar from "../Components/Navbar.jsx";
+import Featured from "../Components/Featured";
+import Hero from "../Components/Hero";
+import Navbar from "../Components/Navbar";
+import products from "../Components/products";
+import ProductCard from "../Components/ProductCard";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import products from "../Components/products.jsx";
 
-export default function Products() {
+export default function AllProducts() {
   const [allprod, setAllprod] = useState(true);
   const [catRing, setCatring] = useState(false);
   const [catEarring, setCatEarring] = useState(false);
@@ -65,7 +66,13 @@ export default function Products() {
       {/* Hero */}
 
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center scale-110 bg-fixed bg-[url(https://images.unsplash.com/photo-1515562141207-7a88fb7ce338)]" />
+        <div
+          className="absolute inset-0 bg-cover bg-center scale-110"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338')",
+          }}
+        />
 
         <div className="absolute inset-0 bg-black/70" />
 
@@ -151,53 +158,57 @@ export default function Products() {
       {/* Products */}
 
       <section className="pb-24 px-4 md:px-8">
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
           className="
           max-w-7xl
           mx-auto
           grid
           
-          grid-cols-2
+          grid-cols-1
+          md:grid-cols-2
           lg:grid-cols-3
           gap-8
           "
         >
           {allprod
             ? products.map((product) => (
-                <Link key={product.id} to={`/product/${product.id}`}>
+                <Link key={product.id} to={`/products/${product.id}`}>
                   <ProductCard key={product.key} product={product} />
                 </Link>
               ))
             : null}
           {catRing
             ? rings.map((product) => (
-                <Link key={product.id} to={`/product/${product.id}`}>
+                <Link key={product.id} to={`/products/${product.id}`}>
                   <ProductCard key={product.key} product={product} />
                 </Link>
               ))
             : null}
           {catEarring
             ? earrings.map((product) => (
-                <Link key={product.id} to={`/product/${product.id}`}>
+                <Link key={product.id} to={`/products/${product.id}`}>
                   <ProductCard key={product.key} product={product} />
                 </Link>
               ))
             : null}
           {catNeckpiece
             ? necklaces.map((product) => (
-                <Link key={product.id} to={`/product/${product.id}`}>
+                <Link key={product.id} to={`/products/${product.id}`}>
                   <ProductCard key={product.key} product={product} />
                 </Link>
               ))
             : null}
           {catBracelet
             ? bracelets.map((product) => (
-                <Link key={product.id} to={`/product/${product.id}`}>
+                <Link key={product.id} to={`/products/${product.id}`}>
                   <ProductCard key={product.key} product={product} />
                 </Link>
               ))
             : null}
-        </div>
+        </motion.div>
       </section>
     </div>
   );

@@ -5,12 +5,7 @@ export default function About() {
     <section className="relative py-40">
       <div
         id="Abtus"
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338')",
-          backgroundAttachment: "fixed",
-        }}
+        className="absolute inset-0 bg-cover bg-center bg-fixed bg-[url(../src/assets/hero1.jpg)]"
       />
 
       <div className="absolute inset-0 bg-black/80" />

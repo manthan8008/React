@@ -5,7 +5,7 @@ import ProductDetails from "./Pages/ProductDetails.jsx";
 
 function App() {
   return (
-    <div className="bg-black text-white overflow-x-hidden">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

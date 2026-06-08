@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./App.css";
+import "../App.css";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const items = ["NECKPIECES", "EARRINGS", "RINGS", "BRACELETS"];
@@ -63,17 +64,18 @@ function Navbar() {
   return (
     <>
       <header className="flex justify-center fixed top-5 z-10 w-full ">
-        <nav className=" flex items-center justify-between backdrop-blur-xl rounded-full border border-white/10 bg-white/5 px-10 text-2xl py-6 custom-font gap-3 w-[92%] text-white">
-          <div>CHAMHAQ</div>
-          <div>
-            <ul className="flex gap-[4vw] items-center text-white">
-              {items.map((item) => (
-                <li>
-                  <FlyoutLink href="#" FlyoutContent={HelloContent}>
-                    {item}
-                  </FlyoutLink>
-                </li>
-              ))}
+        <nav className=" flex items-center justify-between backdrop-blur-xl rounded-full border border-white/10 bg-white/5 px-10 text-2xl py-6 custom-font gap-3 w-[90%] text-white">
+          <Link to="/">
+            <div className="font-bold text-3xl">CHAMHAQ</div>
+          </Link>
+          <div className="">
+            <ul className="hidden md:flex gap-[4vw] items-center text-white">
+              <li>
+                <FlyoutLink href="#" FlyoutContent={HelloContent}>
+                  <Link to="/products"> Category </Link>
+                </FlyoutLink>
+              </li>
+
               <li>
                 <FlyoutLink href="#">About</FlyoutLink>
               </li>
