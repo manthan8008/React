@@ -1,4 +1,7 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
 
 .custom-font {
   font-family: "IBM Plex Mono", monospace;
