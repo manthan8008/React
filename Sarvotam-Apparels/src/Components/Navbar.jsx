@@ -1,15 +1,13 @@
-import { HashLink } from "react-router-hash-link";
-import hamburger from "../assets/hamburger.svg";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="w-full bg-white flex justify-center custom-font top-0 z-1">
-      <nav className=" w-[90%] bg-white flex justify-between py-6 text-2xl sticky z-1 ">
-        <div className="text-3xl">
-          <a href="/#">SARVOTAM APPARELS</a>
+    <header className="w-full bg-white flex justify-center custom-font top-0 z-2">
+      <nav className=" w-full md:px-10 px-3 bg-white flex justify-between items-center py-6 text-2xl top-0 z-1 ">
+        <div className="md:text-3xl">
+          <a href="/#">Sarvotam Apparels</a>
         </div>
         <div>
           <ul className="md:flex gap-10 hidden">

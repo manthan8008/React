@@ -3,9 +3,10 @@ import "../App.css";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Navbar() {
-  const items = ["NECKPIECES", "EARRINGS", "RINGS", "BRACELETS"];
+  const [open, setOpen] = useState(false);
   const FlyoutLink = ({ children, href, FlyoutContent }) => {
     const [open, setOpen] = useState(false);
 
@@ -80,6 +81,50 @@ function Navbar() {
                 <FlyoutLink href="#">About</FlyoutLink>
               </li>
             </ul>
+          </div>
+          <div>
+            <div className="md:hidden">
+              <button
+                onClick={() => {
+                  setOpen(!open);
+                }}
+              >
+                <svg viewBox="0 0 100 80" width="40" height="40">
+                  <rect width="100" height="10"></rect>
+                  <rect y="30" width="100" height="10"></rect>
+                  <rect y="60" width="100" height="10"></rect>
+                </svg>
+              </button>
+            </div>
+            <AnimatePresence>
+              {open && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 h-svh w-full bg-white z-[10000] flex-col flex justify-center"
+                >
+                  <button
+                    onClick={() => {
+                      setOpen(!open);
+                    }}
+                  >
+                    <img
+                      className="h-15 w-15 fixed right-4 top-4"
+                      src="../src/assets/cross.svg"
+                    />
+                  </button>
+                  <ul className="flex flex-col gap-20">
+                    <li>
+                      <a href="/#aboutus">About us</a>
+                    </li>
+                    <li>
+                      <a href="/#contactus">Contact us</a>
+                    </li>
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </nav>
       </header>

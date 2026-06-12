@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="w-full relative custom-font">
       <div className="absolute bg-black/60 w-full md:h-dvh h-120"></div>
       <div className=" w-full">
-        <img className="w-full bg-fixed md:h-screen h-120 bg-cover bg-[url(../src/assets/hero.jpg)]" />
+        <img className="w-full md:h-screen h-120 bg-cover bg-[url(../src/assets/hero.jpg)]" />
       </div>
       <div className="absolute top-1/3 md:ml-20 ml-10 md:w-[40%] h-auto w-auto">
         <h1 className="text-white md:text-8xl text-5xl  font-bold">

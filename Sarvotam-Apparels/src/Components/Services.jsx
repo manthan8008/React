@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import gsap from "gsap";
 
 export default function Services() {
+
+
   return (
     <section className="custom-font">
       <div className="flex justify-center px-6 py-20">
@@ -29,7 +32,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5}}
           className="w-full max-w-105 bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl"
         >
           <img
@@ -49,7 +52,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5 }}
           className="w-full max-w-105 bg-white  rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl"
         >
           <img

@@ -1,5 +1,3 @@
-import Featured from "../Components/Featured";
-import Hero from "../Components/Hero";
 import Navbar from "../Components/Navbar";
 import products from "../Components/products";
 import ProductCard from "../Components/ProductCard";

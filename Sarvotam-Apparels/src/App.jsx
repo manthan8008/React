@@ -1,7 +1,5 @@
-import { useState } from "react";
+
 import "./App.css";
-import { HashLink } from "react-router-hash-link";
-import { easeOut, motion } from "framer-motion";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import ContactUs from "./Components/ContactUs";
@@ -16,6 +14,7 @@ function App() {
       <Services />
       <About />
       <ContactUs />
+     
     </>
   );
 }
