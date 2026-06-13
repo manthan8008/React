@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import gsap from "gsap";
 
 export default function Services() {
 
