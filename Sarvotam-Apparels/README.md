@@ -1,18 +1,77 @@
-# React + Vite
+# Sarvotam Apparels
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and stylish React-based landing website for Sarvotam Apparels, designed to showcase the brand, services, gallery, and contact information in a clean and engaging way.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Sarvotam Apparels is a polished one-page website built with Vite and React. It highlights the brand through a professional layout with sections for:
 
-## React Compiler
+- A welcoming hero section
+- Featured services
+- A visual gallery
+- Brand information
+- A contact section
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Features
 
-Note: This will impact Vite dev & build performances.
+- Responsive and modern UI
+- Smooth scrolling navigation
+- Elegant hero and content sections
+- Gallery section to display products and brand visuals
+- Contact section integrated with EmailJS
+- Fast performance using Vite
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- CSS
+- Framer Motion
+- GSAP
+- EmailJS
+- React Parallax
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at the local Vite URL shown in the terminal.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```bash
+src/
+  Components/
+    Navbar.jsx
+    Hero.jsx
+    Services.jsx
+    Gallery.jsx
+    About.jsx
+    ContactUs.jsx
+  App.jsx
+  main.jsx
+```
+
+## Contact
+
+For business inquiries or collaboration, use the contact section on the website.
