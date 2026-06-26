@@ -1,4 +1,4 @@
-
+import { Parallax, Background } from "react-parallax";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
@@ -14,7 +14,6 @@ function App() {
       <Services />
       <About />
       <ContactUs />
-     
     </>
   );
 }
