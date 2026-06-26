@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import SimpleParallax from "simple-parallax-js";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({ name: "", email: "", city: "" });
@@ -14,11 +16,20 @@ export default function ContactUs() {
   function sendEmail(e) {
     e.preventDefault();
     console.log("form submitted", formData);
+    emailjs
+      .send(
+        "service_3sy4bq8",
+        "template_x2f0rv9",
+        formData,
+        "lRol9OueY78DQEFJL",
+      )
+      .then((res) => alert("Message sent successfully"))
+      .catch((err) => alert("Message couldnt be sent"));
   }
 
   return (
     <section className="custom-font" id="contactus">
-      <motion.div className="flex justify-center w-full h-svh bg-[url(../src/assets/hero.jpg)] bg-cover">
+      <motion.div className="flex justify-center w-full h-svh bg-[url(../src/assets/hero.png)] bg-cover">
         <motion.div
           initial={{ scale: 0.8, y: 15 }}
           whileInView={{ scale: 1, y: 0 }}
@@ -28,35 +39,31 @@ export default function ContactUs() {
           <div className="w-[50%] h-full">
             <h1 className="pt-10 pl-10 md:text-7xl text-2xl">Contact Us</h1>
           </div>
-          <form onSubmit={sendEmail}>
-            <div className="w-[50%] h-full flex md:flex-row flex-wrap flex-col justify-items-center px-10 py-10 gap-10 md:text-2xl">
+          <div className="w-[50%] h-full flex md:flex-row flex-wrap justify-items-center px-10 py-10 gap-20 md:text-2xl">
+            <form onSubmit={sendEmail} className="flex gap-10 flex-col">
               <div>
-                <h1>First name</h1>
+                <h1>Name</h1>
                 <input
+                  name="name"
                   type="text"
                   className="border-b-2"
                   onChange={handleChange}
                 ></input>
               </div>
-              <div>
-                <h1>Last name</h1>
-                <input
-                  type="text"
-                  className="border-b-2"
-                  onChange={handleChange}
-                ></input>
-              </div>
+
               <div>
                 <h1>Email</h1>
                 <input
+                  name="email"
                   type="text"
                   className="border-b-2"
                   onChange={handleChange}
                 ></input>
               </div>
               <div>
-                <h1>City</h1>
+                <h1>Phone No</h1>
                 <input
+                  name="city"
                   type="text"
                   className="border-b-2"
                   onChange={handleChange}
@@ -65,10 +72,11 @@ export default function ContactUs() {
               <div className="col-span-2">
                 <button className="border-2 px-2 py-2">Submit</button>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </motion.div>
       </motion.div>
+      
     </section>
   );
 }
