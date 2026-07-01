@@ -32,10 +32,7 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-105 bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl"
         >
-          <img
-            className="w-full h-72 object-cover"
-            src="/src/assets/printing.jpg"
-          />
+          <img className="w-full h-72 object-cover" src="/printing.jpg" />
           <div className="p-6">
             <h3 className="text-2xl font-semibold mb-4">Printing</h3>
             <p className="text-xl leading-8 wrap-break-words">
@@ -52,10 +49,7 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-105 bg-white  rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl"
         >
-          <img
-            className="w-full h-72 object-cover"
-            src="/src/assets/finish.jpg"
-          />
+          <img className="w-full h-72 object-cover" src="/finish.jpg" />
           <div className="p-6">
             <h3 className="text-2xl font-semibold mb-4">Finishing</h3>
             <p className="text-xl leading-8 wrap-break-words">

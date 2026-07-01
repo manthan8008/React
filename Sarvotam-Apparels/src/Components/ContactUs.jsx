@@ -29,7 +29,7 @@ export default function ContactUs() {
 
   return (
     <section className="custom-font" id="contactus">
-      <motion.div className="flex justify-center w-full h-svh bg-[url(../src/assets/hero.png)] bg-cover">
+      <motion.div className="flex justify-center w-full h-svh bg-[url(/hero.png)] bg-cover">
         <motion.div
           initial={{ scale: 0.8, y: 15 }}
           whileInView={{ scale: 1, y: 0 }}
@@ -76,7 +76,6 @@ export default function ContactUs() {
           </div>
         </motion.div>
       </motion.div>
-      
     </section>
   );
 }

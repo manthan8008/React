@@ -14,10 +14,7 @@ export default function About() {
         </p>
       </div>
       <div className="md:w-[50%] md:h-200 bg-black">
-        <img
-          className="w-full md:h-200 object-cover"
-          src="../src/assets/aboutus.jpg"
-        />
+        <img className="w-full md:h-200 object-cover" src="/aboutus.jpg" />
       </div>
     </section>
   );

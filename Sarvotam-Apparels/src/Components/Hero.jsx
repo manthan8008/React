@@ -6,7 +6,7 @@ export default function Hero() {
       <div className=" w-full">
         <Parallax
           blur={{ min: -15, max: 15 }}
-          bgImage="/src/assets/hero.png"
+          bgImage="/hero.png"
           bgImageAlt="the dog"
           strength={400}
           className="object-fill"
