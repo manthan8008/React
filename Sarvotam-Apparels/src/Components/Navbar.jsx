@@ -5,8 +5,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="w-full bg-white flex justify-center custom-font top-0 z-2">
-      <nav className=" w-full md:px-10 px-3 bg-white flex justify-between items-center py-6 text-2xl top-0 z-1 ">
-        <div className="md:text-3xl">
+      <nav className=" w-full md:px-10 px-3 bg-white flex justify-between items-center  py-6 text-2xl top-0 z-1 ">
+        <div className="md:text-3xl md:flex flex-col pl-3">
           <a href="/#">Sarvotam Apparels</a>
         </div>
         <div>
@@ -19,17 +19,13 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden pr-3">
           <button
             onClick={() => {
               setOpen(!open);
             }}
           >
-            <svg viewBox="0 0 100 80" width="40" height="40">
-              <rect width="100" height="10"></rect>
-              <rect y="30" width="100" height="10"></rect>
-              <rect y="60" width="100" height="10"></rect>
-            </svg>
+            <img src="/hamburger.svg" className="h-12"></img>
           </button>
         </div>
         <AnimatePresence>
