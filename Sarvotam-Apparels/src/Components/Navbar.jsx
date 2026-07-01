@@ -47,7 +47,7 @@ export default function Navbar() {
               >
                 <img
                   className="h-15 w-15 fixed right-4 top-4"
-                  src="../src/assets/cross.svg"
+                  src="/cross.svg"
                 />
                 <ul className="flex flex-col gap-20">
                   <li>

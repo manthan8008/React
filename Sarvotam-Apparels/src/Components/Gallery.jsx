@@ -88,13 +88,7 @@ export default function Gallery() {
             </motion.div>
           ))}{" "}
           {activeImage && (
-            <div
-              style={styles.lightbox}
-              onClick={closeLightbox}
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
+            <div style={styles.lightbox} onClick={closeLightbox}>
               <button style={styles.closeBtn} onClick={closeLightbox}>
                 &times;
               </button>
