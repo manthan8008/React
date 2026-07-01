@@ -24,16 +24,15 @@ export default function Gallery() {
   }, []);
 
   const arrImage = [
-    { id: 1, url: "../src/assets/1.jpg" },
-    { id: 2, url: "../src/assets/2.jpg" },
-    { id: 3, url: "../src/assets/3.jpg" },
-    { id: 4, url: "../src/assets/4.jpg" },
-    { id: 5, url: "../src/assets/5.jpg" },
-    { id: 6, url: "../src/assets/6.jpg" },
-    { id: 6, url: "../src/assets/7.jpg" },
-    { id: 6, url: "../src/assets/8.jpg" },
-    { id: 6, url: "../src/assets/9.jpg" },
-    { id: 6, url: "../src/assets/10.jpg" },
+    { id: 2, url: "/src/assets/2.jpg" },
+    { id: 3, url: "/src/assets/3.jpg" },
+    { id: 4, url: "/src/assets/4.jpg" },
+    { id: 5, url: "/src/assets/5.jpg" },
+    { id: 6, url: "/src/assets/6.jpg" },
+    { id: 6, url: "/src/assets/7.jpg" },
+    { id: 6, url: "/src/assets/8.jpg" },
+    { id: 6, url: "/src/assets/9.jpg" },
+    { id: 6, url: "/src/assets/10.jpg" },
   ];
 
   useEffect(() => {

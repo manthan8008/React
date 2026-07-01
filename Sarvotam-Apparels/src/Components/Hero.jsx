@@ -3,12 +3,10 @@ import { Parallax, Background } from "react-parallax";
 export default function Hero() {
   return (
     <section className="w-full relative custom-font">
-  
       <div className=" w-full">
-      
         <Parallax
           blur={{ min: -15, max: 15 }}
-          bgImage="../src/assets/hero.png"
+          bgImage="/src/assets/hero.png"
           bgImageAlt="the dog"
           strength={400}
           className="object-fill"
