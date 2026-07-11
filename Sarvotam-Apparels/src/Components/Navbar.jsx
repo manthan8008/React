@@ -34,7 +34,7 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 h-svh w-full bg-white z-[10000] flex-col flex justify-center"
+              className="fixed inset-0 h-svh w-full bg-white z-10000 flex-col flex justify-center"
             >
               <button
                 onClick={() => {
