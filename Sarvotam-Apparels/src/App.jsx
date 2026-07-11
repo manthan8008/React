@@ -1,4 +1,3 @@
-import { Parallax, Background } from "react-parallax";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
@@ -11,6 +10,10 @@ import Lenis from "lenis";
 function App() {
   const lenis = new Lenis({
     autoRaf: true,
+  });
+
+  lenis.on("scroll", (e) => {
+    console.log(e);
   });
 
   return (
